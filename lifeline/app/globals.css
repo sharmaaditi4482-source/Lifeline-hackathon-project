@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blood: #A8201A;
+  --blood-light: #C4302A;
+  --ink: #1C1917;
+  --clay: #F7F3EE;
+  --white: #FFFFFF;
+  --ink-10: rgba(28, 25, 23, 0.10);
+  --ink-40: rgba(28, 25, 23, 0.40);
+  --ink-60: rgba(28, 25, 23, 0.60);
+}
+
+body {
+  background: var(--clay);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ── */
+
+.font-display {
+  font-family: 'Fraunces', 'Georgia', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Keyframes ── */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes crossfadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ECG Heartbeat pulse */
+@keyframes heartbeatECG {
+  0%, 55%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 32, 26, 0.35);
+  }
+  60% {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 4px rgba(168, 32, 26, 0.15);
+  }
+  68% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 32, 26, 0);
+  }
+  76% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(168, 32, 26, 0.1);
+  }
+  84% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 32, 26, 0);
+  }
+}
+
+/* Radar Sweep Animation */
+@keyframes radarSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Continuous laser signal travel */
+@keyframes laserDash {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Floating bobbing effect */
+@keyframes floatSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatSwayReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-3deg);
+  }
+}
+
+/* Concentric ring expansion */
+@keyframes ringExpand {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+}
+
+/* Ambient crimson breathing glow */
+@keyframes crimsonGlow {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.08);
+  }
+}
+
+/* Slow radar ping (latency-aware SOS nodes) */
+@keyframes radarPingSlow {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  80%, 100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Conic radar sweep gradient */
+@keyframes radarSweepConic {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Animation utilities ── */
+
+.animate-radar-spin {
+  animation: radarSpin 8s linear infinite;
+  transform-origin: center;
+}
+
+.animate-ping-slow {
+  animation: radarPingSlow 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.radar-sweep-conic {
+  background: conic-gradient(from 0deg, rgba(255, 75, 75, 0) 0deg, rgba(255, 75, 75, 0) 300deg, rgba(255, 75, 75, 0.55) 360deg);
+  animation: radarSweepConic 5s linear infinite;
+}
+
+.animate-laser-dash {
+  stroke-dasharray: 6 10;
+  animation: laserDash 1.2s linear infinite;
+}
+
+.animate-float-sway {
+  animation: floatSway 4s ease-in-out infinite;
+}
+
+.animate-float-sway-rev {
+  animation: floatSwayReverse 5s ease-in-out infinite;
+}
+
+.animate-ring-expand {
+  animation: ringExpand 3s ease-in-out infinite;
+}
+
+.animate-crimson-glow {
+  animation: crimsonGlow 4s ease-in-out infinite;
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.4s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out both;
+}
+
+.animate-crossfade-in {
+  animation: crossfadeIn 0.5s ease-out both;
+}
+
+.animate-heartbeat-ecg {
+  animation: heartbeatECG 1.8s infinite;
+}
+
+.animate-droplet-breathe {
+  animation: dropletBreathe 3s ease-in-out infinite;
+}
+
+.animate-path-signal {
+  stroke-dasharray: 8 22;
+  animation: pathSignalFlow 4s linear infinite;
+}
+
+/* ── Skeleton loader ── */
+
+.skeleton-block {
+  background: rgba(28, 25, 23, 0.08);
+  border-radius: 8px;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+/* ── Page enter animation ── */
+
+.page-enter {
+  animation: fadeSlideUp 0.4s ease-out both;
+}
+
+/* ── Scroll Reveal System ── */
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Snappy Card Hover Upgrade ── */
+
+.premium-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 32, 26, 0.3);
+}
+
+/* Drawing underline effect on card hover */
+.draw-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.draw-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--blood);
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover .draw-underline::after {
+  width: 100%;
+}
+
+/* ── Ticker light scanner line ── */
+
+.ticker-shimmer-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmerSweep 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ── Card styles ── */
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--ink-10);
+  border-radius: 1rem;
+}
+
+.card-2xl {
+  background: var(--white);
+  border: 1px solid var(--ink-10);
+  border-radius: 1.25rem;
+}
+
+/* ── Custom form styling ── */
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blood);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(168, 32, 26, 0.1);
+}
+
+/* ── Leaflet overrides to match design language ── */
+
+.leaflet-container {
+  font-family: 'Inter', sans-serif;
+  border-radius: 1rem;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.leaflet-popup-tip {
+  box-shadow: none;
+}
+
+/* ── Scrollbar styling ── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink-10);
+  border-radius: 3px;
+}
+
+/* ── Selection color ── */
+
+::selection {
+  background: rgba(168, 32, 26, 0.15);
+  color: var(--ink);
+}
+
+/* ── Accessibility: Prefers Reduced Motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+  .animate-rbc-flow-1, 
+  .animate-rbc-flow-2, 
+  .animate-rbc-flow-3, 
+  .animate-rbc-flow-4,
+  .animate-path-signal,
+  .ticker-shimmer-overlay {
+    display: none !important;
+    animation: none !important;
+  }
+  .premium-card:hover {
+    transform: none !important;
+  }
+}
