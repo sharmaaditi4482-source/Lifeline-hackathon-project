@@ -4,18 +4,18 @@
 
 <img src="https://img.shields.io/badge/LIFELINE-Real--Time%20Blood%20Grid-FF4B4B?style=for-the-badge" />
 
-[![Live on Vercel](https://img.shields.io/badge/●%20Live%20on%20Vercel-lifeline--aditi.vercel.app-success?style=for-the-badge&logo=vercel&logoColor=white)](https://lifeline-aditi.vercel.app)
-[![Tests](https://img.shields.io/badge/Tests-39%2F39%20Passed%20(100%25)-brightgreen?style=for-the-badge&logo=vitest)](https://lifeline-aditi.vercel.app)
+[![Live on Vercel](https://img.shields.io/badge/●%20Live%20on%20Vercel-lifeline--aditisharma.vercel.app-success?style=for-the-badge&logo=vercel&logoColor=white)](https://lifeline-aditisharma.vercel.app)
+[![Tests](https://img.shields.io/badge/Tests-39%2F39%20Passed%20(100%25)-brightgreen?style=for-the-badge&logo=vitest)](https://lifeline-aditisharma.vercel.app)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16%20Turbopack-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
 [![Gemini RAG](https://img.shields.io/badge/GenAI-Gemini%20RAG%20%2B%20LLM-8B5CF6?style=for-the-badge&logo=google)](https://aistudio.google.com)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com)
 
-### 🌐 **Live Production:** [lifeline-aditi.vercel.app](https://lifeline-aditi.vercel.app) &nbsp;|&nbsp; 📖 **Local:** `http://localhost:3000`
+### 🌐 **Live Production:** [lifeline-aditisharma.vercel.app](https://lifeline-aditisharma.vercel.app) &nbsp;|&nbsp; 📖 **Local:** `http://localhost:3000`
 
 **Every 2 seconds someone in India needs blood. LifeLine replaces 45-minute phone trees with 1.2-second verified matches — live.**
 
-[🚀 Try Emergency SOS](https://lifeline-aditi.vercel.app/emergency) · [🏥 Hospital Desk](https://lifeline-aditi.vercel.app/hospital) · [🤖 AI Copilot](https://lifeline-aditi.vercel.app/copilot) · [📊 Analytics](https://lifeline-aditi.vercel.app/analytics)
+[🚀 Try Emergency SOS](https://lifeline-aditisharma.vercel.app/emergency) · [🏥 Hospital Desk](https://lifeline-aditisharma.vercel.app/hospital) · [🤖 AI Copilot](https://lifeline-aditisharma.vercel.app/copilot) · [📊 Analytics](https://lifeline-aditisharma.vercel.app/analytics)
 
 </div>
 
